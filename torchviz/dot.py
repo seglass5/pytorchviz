@@ -39,8 +39,8 @@ def make_dot(var, params=None):
     def add_nodes(var):
         print('TOP OF add_nodes')
         print(type(var))
-        print('Does it have Sam?')
-        if hasattr(var, 'sam'):
+        print('Does it have Max?')
+        if hasattr(var, 'max'):
             print('Yes it does')
         if var not in seen:
             if torch.is_tensor(var):
