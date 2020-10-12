@@ -37,6 +37,8 @@ def make_dot(var, params=None):
     output_nodes = (var.grad_fn,) if not isinstance(var, tuple) else tuple(v.grad_fn for v in var)
 
     def add_nodes(var):
+        print('TOP OF add_nodes')
+        print(type(var))
         if var not in seen:
             if torch.is_tensor(var):
                 # note: this used to show .saved_tensors in pytorch0.2, but stopped
