@@ -39,6 +39,9 @@ def make_dot(var, params=None):
     def add_nodes(var):
         print('TOP OF add_nodes')
         print(type(var))
+        print('Does it have Sam?')
+        if hasattr(var, 'sam'):
+            print('Yes it does')
         if var not in seen:
             if torch.is_tensor(var):
                 # note: this used to show .saved_tensors in pytorch0.2, but stopped
